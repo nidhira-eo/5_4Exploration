@@ -5,8 +5,10 @@
     <h1>Customer Reviews</h1>
     {% for review in reviews %}
         <div class='reviews'>
-            <h3>Review By {{review[0]}}</h3>
-            <p class='review'>{{review[1]}}</p>
+            <h3>Review By {{ review[0] }}</h3>
+            <p>Rating: {{ review[2] }}/5 </p>
+            <p class="review">{{ review[1] }}</p>
+
         </div>
     {% endfor %}
 {% endblock %}
