@@ -25,7 +25,7 @@ def get_db_connection():
 def index():
     conn = get_db_connection()
     cur = conn.cursor()
-    cur.execute('SELECT * FROM reviews')
+    cur.execute('SELECT * FROM reviews ORDER By name ASC')
     data = cur.fetchall()
     cur.close()
     conn.close()
