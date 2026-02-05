@@ -40,9 +40,9 @@ def create():
 
         conn = get_db_connection()
         cur = conn.cursor()
-        cur.execute('INSERT INTO reviews (name, review)'
-                    'VALUES (%s, %s)',
-                    (name, review))
+        cur.execute('INSERT INTO reviews (name, review, rating)'
+                    'VALUES (%s, %s, %s)',
+                    (name, review, rating))
         conn.commit()
         cur.close()
         conn.close()
