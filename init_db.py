@@ -18,23 +18,15 @@ cur.execute('CREATE TABLE reviews (name VARCHAR (150) NOT NULL,'
                                  'review TEXT);'
                                 )
 # From Exploration: Insert data
-cur.execute('INSERT INTO reviews(name, review)'
-            'VALUES(%s,%s)',
-            ('Fox Mulder', 'Loved the pizza!')
-            )
 
-cur.execute('INSERT INTO reviews(name, review)'
-            'VALUES(%s,%s)',
-            ('Xavier File', 'Great dessert choices!'
-             ))
+
+
 # Commit the transaction to save the changes
 conn.commit()
 
 
 # From exploration: Select data
-cur.execute('SELECT * FROM reviews WHERE name = %s',('Fox Mulder',))
-results = cur.fetchall()
-print(results)
+
 
 
 
