@@ -15,10 +15,17 @@ cur = conn.cursor()
 # Create a new table for reviews
 cur.execute('DROP TABLE IF EXISTS reviews;')
 cur.execute('CREATE TABLE reviews (name VARCHAR (150) NOT NULL,'
-                                 'review TEXT);'
+                                 'review TEXT,'
+                                 'rating INTEGER);'
                                 )
 # From Exploration: Insert data
+cur.execute('INSERT INTO reviews(name,review,rating)'
+            'VALUES(%s,%s,%s)'
+            ('Fox Mulder','Loved the pizza!',5))
 
+cur.execute('INSERT INTO reviews(name,review,rating)'
+            'VALUES(%s,%s,%s)'
+            ('Xavier File','Great dessert choices!',4))
 
 # Commit the transaction to save the changes
 conn.commit()
