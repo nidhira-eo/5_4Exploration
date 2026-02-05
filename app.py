@@ -37,6 +37,7 @@ def create():
     if request.method == 'POST':
         name = request.form['name']
         review = request.form['review']
+        rating = request.form['rating']
 
         conn = get_db_connection()
         cur = conn.cursor()
