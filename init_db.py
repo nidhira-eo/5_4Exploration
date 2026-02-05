@@ -13,8 +13,8 @@ conn = psycopg2.connect(
 cur = conn.cursor()
 
 # Create a new table for reviews
-cur.execute('DROP TABLE IF EXISTS revie;')
-cur.execute('CREATE TABLE revie (name VARCHAR (150) NOT NULL,'
+cur.execute('DROP TABLE IF EXISTS reviews;')
+cur.execute('CREATE TABLE reviews (name VARCHAR (150) NOT NULL,'
                                  'review TEXT);'
                                 )
 # From Exploration: Insert data
