@@ -18,16 +18,6 @@ cur.execute('CREATE TABLE revie (name VARCHAR (150) NOT NULL,'
                                  'review TEXT);'
                                 )
 # From Exploration: Insert data
-cur.execute('INSERT INTO revie(name, review)' 
-            'VALUES (%s, %s)',
-            ('Fox Mulder','Loved the pizza!')
-            )
-
-cur.execute('INSERT INTO revie(name, review)' 
-            'VALUES (%s, %s)',
-            ('Xavier File','Great dessert choices!')
-            )
-
 
 
 # Commit the transaction to save the changes
